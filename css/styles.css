@@ -116,8 +116,7 @@ h2 {
     align-items: center;
 }
 
-label,
-p {
+label, p {
     font-size: 18px;
     margin-top: 12px;
 }
@@ -152,3 +151,19 @@ p {
     width: 150px;
     margin: 5px 0px 5px 0px;
 }
+
+
+.search {
+    background-color:cornflowerblue;
+    border-top: 1px solid black;
+    width:100%;
+    height: auto;
+    text-align: center;
+    
+}
+
+#busApe{
+    padding-left: 15px;
+    margin-right: 15px ;
+}
+
