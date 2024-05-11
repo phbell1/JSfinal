@@ -24,8 +24,10 @@ class Mascota {
     }
 }
 
+renderScr('#logeo', '#main');
+login();
+registrar();
 
-menu();
 
 function menu() {
     renderScr('#t-menu', '#main');
@@ -39,19 +41,18 @@ function menu() {
     let bPac = document.querySelector('#busCli');
     bPac.addEventListener('click', buscarPaciente);
 
-    document.querySelector('#salir').addEventListener('click', () => window.close());
-
+    let salir = document.querySelector('#menu')
+    document.querySelector('#salir').addEventListener('click', () => {
+        salir.remove();
+        alertA(`Cerrando Sesion`)
+        setTimeout(function(){ renderScr('#logeo', '#main') }, 2800);
+        login();
+        registrar();
+    });
+    
     checkMode();
 
 }
-
-
-// FUNCION QUE RENDERIZA TEMPLATE POR ARGUMENTO EN BASE A SU ID Y AL SELECTOR DEL NODO DESEADO
-function renderScr(idTemp, selector) {
-    let template = document.querySelector(idTemp).content.cloneNode(true);
-    document.querySelector(selector).append(template);
-}
-
 
 function checkMode() {
     if (localStorage.getItem('modo-inicio')) {

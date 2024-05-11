@@ -6,10 +6,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Proyecto Final - JavaScript</title>
   <link rel="stylesheet" href="./css/styles.css">
+
 </head>
 
 <body>
   <div id="main">
+
+    <template id="logeo" class="login">
+      <div class="cont-login" id="login">
+        <div class="tit-login">
+          <p class="p-login">INICIE SESION PARA INGRESAR</p>
+        </div>
+        <form id="log" action="#" class="form-login">
+          <input type="text" id="user" name="nameUser" class="inp-login" placeholder="Usuario" maxlength="15">
+          <input type="password" id="key" name="keyUser" class="inp-login" placeholder="Contraseña" maxlength="10">
+          <input type="button" class="botones-form" id="log-but" value="Login">
+          <input type="button" class="botones-form" id="reg-but" value="Registrarse">
+        </form>
+      </div>
+    </template>
+
+
+    <template id="registrar" class="login">
+      <div class="cont-login" id="register">
+        <div class="tit-login">
+          <p class="p-login">CREE SU USUARIO Y CONTRASEÑA</p>
+        </div>
+        <form id="log" action="#" class="form-login">
+          <input type="text" id="user" name="nameUser" class="inp-login" placeholder="Usuario" maxlength="15">
+          <input type="password" id="key" name="keyUser" class="inp-login" placeholder="Contraseña" maxlength="10">
+          <input type="button" class="botones-form" id="new-user" value="Crear Usuario">
+          <input type="button" class="botones-form" id="back-but" value="Volver">
+        </form>
+      </div>
+    </template>
+
     <template id="t-menu">
       <section id="menu" class="menu bg-light">
         <h1>Historia Clinica Veterinaria<h1>
@@ -82,7 +113,7 @@
     </template>
 
     <template id="buscarCli">
-     <section class="bg-light listado" id="busc">
+      <section class="bg-light listado" id="busc">
         <h1>Buscar Pacientes</h1>
         <div class="con-bot-form">
           <button id="vmenu" class="botones-form" type="button">Menu</button>
@@ -93,15 +124,16 @@
         </div>
       </section>
     </template>
-   
-  </div>
 
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
   <script src="./js/render.js"></script>
   <script src="./js/buscar_cli.js"></script>
   <script src="./js/ver_cli.js"></script>
   <script src="./js/nuevo_cli.js"></script>
   <script src="./js/alertas.js"></script>
+  <script src="./js/users.js"></script>
   <script src="./js/main.js"></script>
 </body>
 

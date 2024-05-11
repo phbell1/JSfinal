@@ -39,7 +39,6 @@ function crearCliente() {
     })
 
 
-    // BOTON VOLVER MENU EN FORM
     let vMenu = document.querySelector('#vmenu');
     vMenu.addEventListener('click', () => {
         let delForm = document.querySelector('#new-cust');
