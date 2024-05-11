@@ -17,9 +17,7 @@ function login() {
                 let delLogin = document.querySelector('#login');
                 delLogin.remove();
                 alertA(`Bienvenido ${matchName.name}`)
-                setTimeout (menu, 2500);
-            
-
+                setTimeout(menu, 2500);
             } else {
                 alertA(textG, 'error')
             }
@@ -44,7 +42,7 @@ function checkUser() {
         if (registrados) {
             alertA(`El Usuario ${registrados.name} ya existe`, 'error');
         } else {
-            users.push(registro);
+            users.push(registro); /*ACA HAY QUE PASARLO AL LOCALSTORAGE PARA ASINCRONICA*/ 
             alertA(textI, 'success');
         }
     }

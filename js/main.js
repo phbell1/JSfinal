@@ -45,11 +45,14 @@ function menu() {
     document.querySelector('#salir').addEventListener('click', () => {
         salir.remove();
         alertA(`Cerrando Sesion`)
-        setTimeout(function(){ renderScr('#logeo', '#main') }, 2800);
-        login();
-        registrar();
+        setTimeout(function () {
+            renderScr('#logeo', '#main')
+            login();
+            registrar();
+        }, 2800);
+
     });
-    
+
     checkMode();
 
 }
